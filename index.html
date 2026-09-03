@@ -339,7 +339,7 @@
       <div class="sources-line">Data: index constituents from <a href="https://www.tickertape.in/indices/nifty-100-index-.NIFTY100/constituents" target="_blank" rel="noopener">Tickertape</a> &middot; company fundamentals, valuation &amp; shareholding from <a href="https://www.screener.in" target="_blank" rel="noopener">Screener.in</a> &middot; macro indicators from PIB, MOSPI &amp; RBI (see sources below each figure). See &ldquo;How to read this&rdquo; for full methodology.</div>
     </div>
     <div class="asof-row">
-      <div class="asof"><span class="pulse"></span> fundamentals pulled 28 Aug 2026 · FII/DII latest disclosed quarter · 1Y returns as of 28 Aug 2026, IST</div>
+      <div class="asof"><span class="pulse"></span> fundamentals pulled 3 Sep 2026 · FII/DII latest disclosed quarter · 1Y returns as of 3 Sep 2026, IST</div>
       <button type="button" class="refresh-btn" id="refreshBtn" onclick="checkForLatest(this)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
         <span class="refresh-label">Check for latest</span>
@@ -366,12 +366,12 @@
       <div class="hero-left">
         <div class="eyebrow">Nearest macro-economic regime</div>
         <h2 class="regime-name">Stable Moderate Growth <span class="regime-id">— R4</span></h2>
-        <p class="regime-note">Today's reading sits closest to R4 &mdash; a stretch of steady ~7% growth, historically dominated by CL5 (High-Quality Growth) and CL2 firms. The one thing pulling it toward R2 instead is the rupee: this year's ~9% depreciation is sharper than R4's typical ~3%. Today's NSE 100 cross-section is led by CL3 (Moderately Leveraged Average), 52% of firms.</p>
+        <p class="regime-note">Today's reading sits closest to R4 &mdash; a stretch of steady ~7% growth, historically dominated by CL5 (High-Quality Growth) and CL2 firms. The one thing pulling it toward R2 instead is the rupee: this year's ~7% depreciation is sharper than R4's typical ~3%. Today's NSE 100 cross-section is led by CL3 (Moderately Leveraged Average), 52% of firms.</p>
         <div class="readout">
           <div class="cell">
             <div class="k">GDP growth</div>
-            <div class="v">7.7%</div>
-            <div class="src">PIB, FY26 provisional</div>
+            <div class="v">7.8%</div>
+            <div class="src">PIB/MOSPI, Q1 FY27</div>
           </div>
           <div class="cell">
             <div class="k">CPI inflation</div>
@@ -385,8 +385,8 @@
           </div>
           <div class="cell">
             <div class="k">INR/USD, YoY</div>
-            <div class="v">+9.17%</div>
-            <div class="src">₹95.70 vs ₹87.66 (11 Aug 2025)</div>
+            <div class="v">+7.4%</div>
+            <div class="src">₹94.56 vs ₹88.07 (3 Sep 2025)</div>
           </div>
         </div>
       </div>
@@ -442,7 +442,7 @@
     <details class="method" open>
       <summary>How to read this</summary>
       <div class="body">
-      <p><strong>Data sources.</strong> The current NSE 100 constituent list is from <a href="https://www.tickertape.in/indices/nifty-100-index-.NIFTY100/constituents" target="_blank" rel="noopener">Tickertape</a>. Each firm's D/E, ROCE, P/B, FII/DII shareholding, and 1-year price return are pulled from its <a href="https://www.screener.in" target="_blank" rel="noopener">Screener.in</a> page. The regime nowcast's macro inputs are from the Press Information Bureau (GDP), MOSPI (CPI inflation), and the RBI Monetary Policy Committee (repo rate), each cited beside its figure above. Everything on this page is a point-in-time pull as of 28 Aug 2026, not a live feed.</p>
+      <p><strong>Data sources.</strong> The current NSE 100 constituent list is from <a href="https://www.tickertape.in/indices/nifty-100-index-.NIFTY100/constituents" target="_blank" rel="noopener">Tickertape</a>. Each firm's D/E, ROCE, P/B, FII/DII shareholding, and 1-year price return are pulled from its <a href="https://www.screener.in" target="_blank" rel="noopener">Screener.in</a> page. The regime nowcast's macro inputs are from the Press Information Bureau (GDP), MOSPI (CPI inflation), and the RBI Monetary Policy Committee (repo rate), each cited beside its figure above. Everything on this page is a point-in-time pull as of 3 Sep 2026, not a live feed.</p>
       <p><strong>Methodology.</strong> Cluster is a live k-means fit (k=7) run directly on these 100 NSE 100 constituents' standardized D/E, ROCE, and P/B &mdash; not a fixed rule. Each of the fit's empirical groups is relabeled to the closest-matching CL1&ndash;CL7 archetype below by comparing its centroid's Low/Moderate/High pattern on each dimension; more than one empirical group can land on the same label, and it's possible for a given fit not to produce all seven archetypes. The legend above the table shows each archetype's typical pattern alongside a cluster-mix bar with this cross-section's actual proportions.</p>
       <ul class="regime-meanings">
         <li><strong>CL1 &mdash; Low-Leverage Value:</strong> low debt, richly valued, middling returns on capital &mdash; conservative balance sheets the market already prices generously.</li>
@@ -473,11 +473,11 @@
 
 <script>
 const regimeRanking = [
-  {id:"R4", label:"Stable Moderate Growth", distance:2.026, nearest:true},
-  {id:"R2", label:"Slow Growth / Stagnation", distance:2.691},
-  {id:"R5", label:"Crisis / Contraction", distance:3.033},
-  {id:"R3", label:"Recovery / Transition", distance:3.355},
-  {id:"R1", label:"High Growth", distance:3.692},
+  {id:"R4", label:"Stable Moderate Growth", distance:1.524, nearest:true},
+  {id:"R2", label:"Slow Growth / Stagnation", distance:2.620},
+  {id:"R5", label:"Crisis / Contraction", distance:2.874},
+  {id:"R3", label:"Recovery / Transition", distance:3.068},
+  {id:"R1", label:"High Growth", distance:3.160},
 ];
 
 const maxDist = Math.max(...regimeRanking.map(r=>r.distance));
